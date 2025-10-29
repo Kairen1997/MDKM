@@ -26,7 +26,15 @@
                 <li><a href="pencapaian-piagam-pelanggan.php">Pencapaian Piagam Pelanggan</a></li>
             </ul>
         </li>
-        <li><a href="galeri.php">Galeri</a></li>
+        <li class="has-submenu">
+            <a href="galeri.php" class="submenu-toggle">Galeri <span class="submenu-arrow">▼</span></a>
+            <ul class="submenu">
+                <li><a href="galeri-keratan-akhbar.php">Keratan Akhbar</a></li>
+                <li><a href="galeri-anugerah.php">Anugerah</a></li>
+                <li><a href="galeri-video.php">Video</a></li>
+                <li><a href="galeri-gambar.php">Gambar</a></li>
+            </ul>
+        </li>
         <li><a href="tempat-menarik.php">Tempat Menarik Kota Marudu</a></li>
         <li><a href="borang-maklum-balas.php">Borang Maklum Balas</a></li>
         <li><a href="hubungi-kami.php">Hubungi Kami</a></li>
