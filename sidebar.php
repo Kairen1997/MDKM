@@ -60,6 +60,15 @@
             
         <li><a href="borang-maklum-balas.php">Borang Maklum Balas</a></li>
         <li><a href="hubungi-kami.php">Hubungi Kami</a></li>
+        <li class="has-submenu">
+            <a href="dasar-polisi-notis.php" class="submenu-toggle">Dasar, Polisi & Notis <span class="submenu-arrow">▼</span></a>
+            <ul class="submenu">
+                <li><a href="dasar-privasi.php">Dasar Privasi</a></li>
+                <li><a href="dasar-keselamatan.php">Dasar Keselamatan</a></li>
+                <li><a href="notis-penafian.php">Notis Penafian</a></li>
+                <li><a href="soalan-lazim.php">Soalan Lazim</a></li>
+            </ul>
+        </li>
         <li><a href="e-buletin.php">E-Buletin</a></li>
     </ul>
 </nav>
