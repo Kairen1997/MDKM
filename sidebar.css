@@ -139,7 +139,7 @@
 }
 
 .has-submenu.open .submenu {
-    max-height: 300px;
+    max-height: 1000px;
 }
 
 .submenu li {

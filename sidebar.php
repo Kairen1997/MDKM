@@ -39,11 +39,12 @@
             <a href="tempat-menarik.php" class="submenu-toggle">Tempat Menarik Kota Marudu <span class="submenu-arrow">▼</span></a>
             <ul class="submenu">
                 <li><a href="panorama-paradise-resort.php">Panorama Paradise Resort</a></li>
-                <li><a href="tempat-menarik.php#pantai-mendawang">Pantai Mendawang</a></li>
-                <li><a href="tempat-menarik.php#sarangheyo-campground">Sarangheyo - Campground</a></li>
-                <li><a href="tempat-menarik.php#teringai-beach-and-lodge">Teringai Beach and Lodge</a></li>
-                <li><a href="tempat-menarik.php#pengapuyan-campsite">Pengapuyan Campsite</a></li>
-                <li><a href="tempat-menarik.php#walai-tobilung">Walai Tobilung</a></li>
+                <li><a href="pantai-mendawang.php">Pantai Mendawang</a></li>
+                <li><a href="sarangheyo-campground.php">Sarangheyo - Campground</a></li>
+				<li><a href="teringai-beach-and-lodge.php">Teringai Beach and Lodge</a></li>
+				<li><a href="pangapuyan-campsite.php">Pengapuyan Campsite</a></li>
+				<li><a href="walai-tobilung.php">Walai Tobilung</a></li>
+                <li><a href="kinabalu-park-sub-station-serinsim.php">Kinabalu Park Sub-Station Serinsim</a></li>
             </ul>
         </li>
             
