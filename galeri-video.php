@@ -173,12 +173,7 @@
 
     <header class="header">
         <div class="header-container">
-            <div class="logo">
-                <img src="Logo_MDKM_1-removebg-preview.png" alt="Logo MDKM" class="logo-img">
-                <div class="logo-text">
-                    <h1>Majlis Daerah Kota Marudu</h1>
-                </div>
-            </div>
+			<?php include 'header-brand.php'; ?>
         </div>
     </header>
 

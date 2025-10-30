@@ -14,6 +14,20 @@
             margin: 0;
         }
 
+        /* Header */
+        .header { background: linear-gradient(135deg, #228B22 0%, #32CD32 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo-section { display: flex; align-items: center; gap: 10px; }
+        .government-logos { display: flex; align-items: center; gap: 8px; }
+        .government-logos img { width: 80px; height: 80px; object-fit: contain; flex-shrink: 0; filter: contrast(1.2) brightness(1.1); }
+        .logo { display: flex; align-items: center; gap: 15px; }
+        .logo-img { width: 80px; height: 80px; object-fit: contain; flex-shrink: 0; }
+        .logo-text h1 { font-size: 1.8rem; font-weight: bold; margin-bottom: 5px; }
+        .logo-text p { font-size: 0.9rem; opacity: 0.9; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-menu a { color: white; text-decoration: none; font-weight: 500; padding: 10px 15px; border-radius: 5px; }
+        .nav-menu a:hover { background-color: rgba(255,255,255,0.1); }
+
         .page-header {
             max-width: 1200px;
             margin: 0 auto;
@@ -105,6 +119,21 @@
 </head>
 <body>
     <?php include 'sidebar.php'; ?>
+
+    <header class="header">
+        <div class="header-container">
+            <?php include 'header-brand.php'; ?>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="landingpage.php">Beranda</a></li>
+                    <li><a href="landingpage.php#berita">Berita</a></li>
+                    <li><a href="landingpage.php#pengumuman">Pengumuman</a></li>
+                    <li><a href="landingpage.php#aktiviti">Aktiviti</a></li>
+                    <li><a href="landingpage.php#perkhidmatan">Perkhidmatan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <div class="page-header">
         <h1 class="page-title">Anugerah</h1>
