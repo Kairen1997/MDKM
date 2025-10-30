@@ -35,7 +35,18 @@
                 <li><a href="galeri-gambar.php">Gambar</a></li>
             </ul>
         </li>
-        <li><a href="tempat-menarik.php">Tempat Menarik Kota Marudu</a></li>
+        <li class="has-submenu">
+            <a href="tempat-menarik.php" class="submenu-toggle">Tempat Menarik Kota Marudu <span class="submenu-arrow">▼</span></a>
+            <ul class="submenu">
+                <li><a href="tempat-menarik.php#panorama-paradise-resort">Panorama Paradise Resort</a></li>
+                <li><a href="tempat-menarik.php#pantai-mendawang">Pantai Mendawang</a></li>
+                <li><a href="tempat-menarik.php#sarangheyo-campground">Sarangheyo - Campground</a></li>
+                <li><a href="tempat-menarik.php#teringai-beach-and-lodge">Teringai Beach and Lodge</a></li>
+                <li><a href="tempat-menarik.php#pengapuyan-campsite">Pengapuyan Campsite</a></li>
+                <li><a href="tempat-menarik.php#walai-tobilung">Walai Tobilung</a></li>
+            </ul>
+        </li>
+            
         <li><a href="borang-maklum-balas.php">Borang Maklum Balas</a></li>
         <li><a href="hubungi-kami.php">Hubungi Kami</a></li>
         <li><a href="e-buletin.php">E-Buletin</a></li>
