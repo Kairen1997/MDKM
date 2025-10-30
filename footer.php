@@ -30,8 +30,9 @@
 		.footer-contact-item { min-width: 0; }
 		.footer-contact-item h4 { font-weight: 700; letter-spacing: .2px; }
 		.footer-contact-item p { opacity: .95; }
-		.footeropyright { margin-top: 36px; font-size: 14px; opacity: 0.95; }
-		.footeropyright p { text-align: center; }
+		.footeropyright { margin-top: 36px; font-size: 14px; opacity: 0.95; display: flex; align-items: center; justify-content: center; gap: 12px; }
+		.footeropyright p { margin: 0; text-align: center; }
+		.footer-logo { display: inline-block; max-height: 56px; height: auto; width: auto; }
 		/* Responsive columns */
 		@media (max-width: 1200px) { .footer-contact-grid { grid-template-columns: repeat(2, minmax(220px, 1fr)); } }
 		@media (max-width: 700px) { .footer-contact-grid { grid-template-columns: 1fr; } }
@@ -40,6 +41,7 @@
 	<div class="footer-content">
 		<!-- Contact block removed: info exists in sidebar -->
 		<div class="footeropyright">
+			<img class="footer-logo" src="images/SMJ_Logo-removebg-preview.png" alt="SMJ logo" loading="lazy" />
 			<p>&copy; 2024 Majlis Daerah Kota Marudu. Hak Cipta Terpelihara.</p>
 		</div>
 	</div>

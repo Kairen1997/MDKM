@@ -49,6 +49,24 @@
             gap: 20px;
         }
 
+        /* Place header info next to navigation on landing page */
+        .header-right .header-info { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            font-size: 14px; 
+            white-space: nowrap; 
+        }
+        .header-right .header-info .badge { 
+            background: #0ea5e9; 
+            color: #fff; 
+            padding: 4px 8px; 
+            border-radius: 999px; 
+            font-weight: 700; 
+        }
+        /* Hide the header-info rendered inside header-brand on landing page */
+        .logo-section .header-info { display: none; }
+
         .social-links {
             display: flex;
             align-items: center;
@@ -377,6 +395,40 @@
             margin: 5px 0;
         }
 
+        /* Pautan Pantas */
+        .quick-links {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .quick-links h2.section-title { margin-bottom: 16px; }
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        .quick-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 16px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+        .quick-link a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: #0f172a;
+            font-weight: 700;
+            padding: 14px 10px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #e0f2fe 0%, #d1fae5 100%);
+        }
+        .quick-link a:hover { filter: brightness(0.98); }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-container {
@@ -480,6 +532,13 @@
                         <li><a href="#perkhidmatan">Perkhidmatan</a></li>
                     </ul>
                 </nav>
+                <div class="header-info" aria-label="Maklumat Pengunjung dan Tarikh">
+                    <span class="label">Jumlah Pengunjung:</span>
+                    <span class="badge" id="visitorCountNav"><?php echo isset($visitorCount) ? (int)$visitorCount : 0; ?></span>
+                    <span class="label" aria-hidden="true">|</span>
+                    <span class="label">Tarikh:</span>
+                    <span id="currentDateNav" title="Tarikh masa nyata"></span>
+                </div>
             </div>
         </div>
     </header>
@@ -625,6 +684,24 @@
         </section>
 
     </main>
+
+    <!-- Pautan Pantas Section -->
+    <section class="section" id="pautan-pantas" aria-labelledby="pautanPantasTitle">
+        <div class="quick-links">
+            <h2 class="section-title" id="pautanPantasTitle">Pautan Pantas</h2>
+            <div class="quick-links-grid">
+                <div class="quick-link">
+                    <a href="https://i-adu.sabah.gov.my/" target="_blank" rel="noopener noreferrer">i-Adu Aduan</a>
+                </div>
+                <div class="quick-link">
+                    <a href="https://murninetsv2.planmalaysia.gov.my/login" target="_blank" rel="noopener noreferrer">MURNInets v2</a>
+                </div>
+                <div class="quick-link">
+                    <a href="https://egjpkn.sabah.gov.my/SSONewLogin/index.asp" target="_blank" rel="noopener noreferrer">SSO Kerajaan Sabah</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <?php include 'footer.php'; ?>

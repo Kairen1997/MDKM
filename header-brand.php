@@ -1,5 +1,29 @@
 <?php
 // Shared header brand block (government logos + MDKM logo and text)
+
+// Session-based visitor counter (safe: avoid starting session after headers sent)
+$canSendHeaders = !headers_sent();
+if (session_status() === PHP_SESSION_NONE && $canSendHeaders) {
+    @session_start();
+}
+
+$counterFile = __DIR__ . DIRECTORY_SEPARATOR . 'counter.txt';
+if (!file_exists($counterFile)) {
+    @file_put_contents($counterFile, '0');
+}
+
+$visitorCount = 0;
+$rawCount = @file_get_contents($counterFile);
+if ($rawCount !== false) {
+    $visitorCount = (int)$rawCount;
+}
+
+// Only increment when we have an active session (prevents duplicate counts and warnings)
+if (session_status() === PHP_SESSION_ACTIVE && empty($_SESSION['mdkm_counted'])) {
+    $visitorCount++;
+    @file_put_contents($counterFile, (string)$visitorCount, LOCK_EX);
+    $_SESSION['mdkm_counted'] = true;
+}
 ?>
 <style>
 /* Header Brand – District Office styling */
@@ -28,7 +52,8 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-left: auto;
+    /* allow a right-side info box to occupy far-right */
+    margin-left: 0;
 }
 
 .logo-img {
@@ -114,6 +139,34 @@
         font-size: 14px;
     }
 }
+
+/* Top-right info box: visitors + real-time date */
+.header-info {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: right;
+    font-size: 14px;
+    color: #0f172a;
+    white-space: nowrap;
+}
+.header-info .badge {
+    background: #0ea5e9;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+.header-info .label { opacity: 0.9; }
+
+@media (max-width: 768px) {
+    .header-info {
+        margin-left: 0;
+        font-size: 13px;
+        gap: 8px;
+    }
+}
 </style>
 <div class="logo-section">
 	<div class="government-logos">
@@ -127,6 +180,13 @@
 			<p style="color:#fff">Melayani Masyarakat dengan Dedikasi</p>
 		</div>
 	</div>
+    <div class="header-info" aria-label="Maklumat Pengunjung dan Tarikh">
+        <span class="label">Jumlah Pengunjung:</span>
+        <span class="badge" id="visitorCount"><?php echo (int)$visitorCount; ?></span>
+        <span class="label" aria-hidden="true">|</span>
+        <span class="label">Tarikh:</span>
+        <span id="currentDate" title="Tarikh masa nyata"></span>
+    </div>
 </div>
 
 <!-- Image Modal Markup -->
@@ -176,6 +236,29 @@
 	document.addEventListener('keydown', function(e) {
 		if (e.key === 'Escape') closeModal();
 	});
+})();
+
+// Real-time date (ms-MY locale)
+(function(){
+    function formatNow() {
+        try {
+            var now = new Date();
+            return now.toLocaleString('ms-MY', {
+                weekday: 'long', day: '2-digit', month: 'long', year: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            });
+        } catch (e) {
+            return new Date().toString();
+        }
+    }
+    function tick() {
+        var el = document.getElementById('currentDate');
+        if (el) el.textContent = formatNow();
+        var elNav = document.getElementById('currentDateNav');
+        if (elNav) elNav.textContent = formatNow();
+    }
+    tick();
+    setInterval(tick, 1000);
 })();
 </script>
 
