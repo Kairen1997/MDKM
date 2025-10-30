@@ -131,11 +131,11 @@
         <div class="header-container">
             <div class="logo-section">
                 <div class="government-logos">
-                    <img src="Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" title="Jata Negara Malaysia">
-                    <img src="Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" title="Jata Wilayah Sabah">
+					<img src="images/Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" title="Jata Negara Malaysia">
+					<img src="images/Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" title="Jata Wilayah Sabah">
                 </div>
                 <div class="logo">
-                    <img src="Logo_MDKM_1-removebg-preview.png" alt="Majlis Daerah Kota Marudu Logo" class="logo-img">
+					<img src="images/Logo_MDKM_1-removebg-preview.png" alt="Majlis Daerah Kota Marudu Logo" class="logo-img">
                     <div class="logo-text">
                         <h1>Majlis Daerah Kota Marudu</h1>
                         <p>Melayani Masyarakat dengan Dedikasi</p>
@@ -163,10 +163,10 @@
             <div>
                 <div class="gallery">
                     <figure>
-                        <img src="paradise%20KM%201.jpg" alt="Panorama Paradise Resort - pemandangan bangunan kaca dan persekitaran hijau">
+						<img src="images/paradise%20KM%201.jpg" alt="Panorama Paradise Resort - pemandangan bangunan kaca dan persekitaran hijau">
                     </figure>
                     <figure>
-                        <img src="paradies%20km%202.jpg" alt="Panorama Paradise Resort - papan tanda Villa Check-In dan tangga taman">
+						<img src="images/paradies%20km%202.jpg" alt="Panorama Paradise Resort - papan tanda Villa Check-In dan tangga taman">
                     </figure>
                 </div>
                 <div class="info-card">

@@ -56,11 +56,11 @@
 		<div class="header-container">
 			<div class="logo-section">
 				<div class="government-logos">
-					<img src="Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" title="Jata Negara Malaysia">
-					<img src="Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" title="Jata Wilayah Sabah">
+					<img src="images/Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" title="Jata Negara Malaysia">
+					<img src="images/Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" title="Jata Wilayah Sabah">
 				</div>
 				<div class="logo">
-					<img src="Logo_MDKM_1-removebg-preview.png" alt="Majlis Daerah Kota Marudu Logo" class="logo-img">
+					<img src="images/Logo_MDKM_1-removebg-preview.png" alt="Majlis Daerah Kota Marudu Logo" class="logo-img">
 					<div class="logo-text">
 						<h1>Majlis Daerah Kota Marudu</h1>
 						<p>Melayani Masyarakat dengan Dedikasi</p>
@@ -86,10 +86,10 @@
 			<div>
 				<div class="gallery">
 					<figure>
-						<img src="Walai-Tobilung-10.jpg" alt="Walai Tobilung - paparan papan tanda budaya Tobilung">
+						<img src="images/Walai-Tobilung-10.jpg" alt="Walai Tobilung - paparan papan tanda budaya Tobilung">
 					</figure>
 					<figure>
-						<img src="Walai-Tobilung-12.jpg" alt="Walai Tobilung - suasana rumah budaya Tobilung">
+						<img src="images/Walai-Tobilung-12.jpg" alt="Walai Tobilung - suasana rumah budaya Tobilung">
 					</figure>
 				</div>
 				<div class="info-card">

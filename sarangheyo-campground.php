@@ -52,11 +52,11 @@
         <div class="header-container">
             <div class="logo-section">
                 <div class="government-logos">
-                    <img src="Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" title="Jata Negara Malaysia">
-                    <img src="Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" title="Jata Wilayah Sabah">
+					<img src="images/Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" title="Jata Negara Malaysia">
+					<img src="images/Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" title="Jata Wilayah Sabah">
                 </div>
                 <div class="logo">
-                    <img src="Logo_MDKM_1-removebg-preview.png" alt="Majlis Daerah Kota Marudu Logo" class="logo-img">
+					<img src="images/Logo_MDKM_1-removebg-preview.png" alt="Majlis Daerah Kota Marudu Logo" class="logo-img">
                     <div class="logo-text">
                         <h1>Majlis Daerah Kota Marudu</h1>
                         <p>Melayani Masyarakat dengan Dedikasi</p>
@@ -82,10 +82,10 @@
             <div>
                 <div class="gallery">
                     <figure>
-                        <img src="sarangheyo%20campground%201.jpg" alt="Sarangheyo Campground - tapak perkhemahan dan pemandangan bukit">
+						<img src="images/sarangheyo%20campground%201.jpg" alt="Sarangheyo Campground - tapak perkhemahan dan pemandangan bukit">
                     </figure>
                     <figure>
-                        <img src="sarangheyo%20campground%202.jpg" alt="Sarangheyo Campground - aktiviti rekreasi dan suasana alam">
+						<img src="images/sarangheyo%20campground%202.jpg" alt="Sarangheyo Campground - aktiviti rekreasi dan suasana alam">
                     </figure>
                 </div>
                 <div class="info-card">

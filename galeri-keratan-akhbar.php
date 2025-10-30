@@ -65,7 +65,7 @@
     <meta property="og:title" content="Keratan Akhbar MDKM">
     <meta property="og:description" content="Himpunan berita dan liputan media berkaitan MDKM.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="Logo_MDKM_1-removebg-preview.png">
+    <meta property="og:image" content="images/Logo_MDKM_1-removebg-preview.png">
     <meta name="description" content="Keratan akhbar dan liputan media berkaitan Majlis Daerah Kota Marudu (MDKM).">
 </head>
 <body>
@@ -76,11 +76,11 @@
         <div class="header-container">
             <div class="logo-section">
                 <div class="government-logos">
-                    <img src="Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" title="Jata Negara Malaysia">
-                    <img src="Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" title="Jata Wilayah Sabah">
+                    <img src="images/Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" title="Jata Negara Malaysia">
+                    <img src="images/Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" title="Jata Wilayah Sabah">
                 </div>
                 <div class="logo">
-                    <img src="Logo_MDKM_1-removebg-preview.png" alt="Majlis Daerah Kota Marudu Logo" class="logo-img">
+                    <img src="images/Logo_MDKM_1-removebg-preview.png" alt="Majlis Daerah Kota Marudu Logo" class="logo-img">
                     <div class="logo-text">
                         <h1>Majlis Daerah Kota Marudu</h1>
                         <p>Melayani Masyarakat dengan Dedikasi</p>
@@ -179,7 +179,7 @@
                     <div class="footer-contact-item" style="display: flex; align-items: flex-start; gap: 15px; text-align: left;">
                         <div class="contact-icon" style="font-size: 1.5rem; margin-top: 5px;">
                             <a href="https://www.facebook.com/people/Majlis-Daerah-Kota-Marudu/100064592716263/" target="_blank" title="Ikuti Kami di Facebook">
-                                <img src="facebook-logo.png" alt="Facebook" class="contact-logo" style="width: 2rem; height: 2rem; object-fit: contain;">
+                                <img src="images/facebook-logo.png" alt="Facebook" class="contact-logo" style="width: 2rem; height: 2rem; object-fit: contain;">
                             </a>
                         </div>
                         <div>
@@ -190,7 +190,7 @@
                     <div class="footer-contact-item" style="display: flex; align-items: flex-start; gap: 15px; text-align: left;">
                         <div class="contact-icon" style="font-size: 1.5rem; margin-top: 5px;">
                             <a href="https://www.youtube.com/channel/UClqBIJh4U2HXOVfJqMoD2JA" target="_blank" title="Ikuti Kami di YouTube">
-                                <img src="youtube-play-logo-png-7.png" alt="YouTube" class="contact-logo" style="width: 2rem; height: 2rem; object-fit: contain;">
+                                <img src="images/youtube-play-logo-png-7.png" alt="YouTube" class="contact-logo" style="width: 2rem; height: 2rem; object-fit: contain;">
                             </a>
                         </div>
                         <div>

@@ -174,11 +174,11 @@
     </style>
     <meta name="description" content="Galeri gambar rasmi MDKM - Majlis Daerah Kota Marudu.">
     <meta name="robots" content="index, follow">
-    <link rel="preload" as="image" href="Logo_MDKM_1-removebg-preview.png">
-    <link rel="preload" as="image" href="Jata_Negara-removebg-preview.png">
-    <link rel="preload" as="image" href="Jata_Wilayah_Sabah-removebg-preview.png">
-    <link rel="preload" as="image" href="facebook-logo.png">
-    <link rel="preload" as="image" href="youtube-play-logo-png-7.png">
+    <link rel="preload" as="image" href="images/Logo_MDKM_1-removebg-preview.png">
+    <link rel="preload" as="image" href="images/Jata_Negara-removebg-preview.png">
+    <link rel="preload" as="image" href="images/Jata_Wilayah_Sabah-removebg-preview.png">
+    <link rel="preload" as="image" href="images/facebook-logo.png">
+    <link rel="preload" as="image" href="images/youtube-play-logo-png-7.png">
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const lb = document.querySelector('.lightbox');
@@ -211,7 +211,7 @@
     <header class="header">
         <div class="header-container">
             <div class="logo">
-                <img src="Logo_MDKM_1-removebg-preview.png" alt="Logo MDKM" class="logo-img">
+                <img src="images/Logo_MDKM_1-removebg-preview.png" alt="Logo MDKM" class="logo-img">
                 <div class="logo-text">
                     <h1>Majlis Daerah Kota Marudu</h1>
                 </div>
@@ -227,23 +227,23 @@
             <h3 class="section-title">Album Pilihan</h3>
             <div class="gallery-grid">
                 <div class="gallery-item" title="Logo Rasmi MDKM">
-                    <img src="Logo_MDKM_1-removebg-preview.png" data-full="Logo_MDKM_1-removebg-preview.png" alt="Logo Rasmi MDKM">
+                    <img src="images/Logo_MDKM_1-removebg-preview.png" data-full="images/Logo_MDKM_1-removebg-preview.png" alt="Logo Rasmi MDKM">
                     <div class="caption">Logo Rasmi MDKM</div>
                 </div>
                 <div class="gallery-item" title="Jata Negara Malaysia">
-                    <img src="Jata_Negara-removebg-preview.png" data-full="Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia">
+                    <img src="images/Jata_Negara-removebg-preview.png" data-full="images/Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia">
                     <div class="caption">Jata Negara Malaysia</div>
                 </div>
                 <div class="gallery-item" title="Jata Wilayah Sabah">
-                    <img src="Jata_Wilayah_Sabah-removebg-preview.png" data-full="Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah">
+                    <img src="images/Jata_Wilayah_Sabah-removebg-preview.png" data-full="images/Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah">
                     <div class="caption">Jata Wilayah Sabah</div>
                 </div>
                 <div class="gallery-item" title="Facebook MDKM">
-                    <img src="facebook-logo.png" data-full="facebook-logo.png" alt="Facebook MDKM">
+                    <img src="images/facebook-logo.png" data-full="images/facebook-logo.png" alt="Facebook MDKM">
                     <div class="caption">Facebook MDKM</div>
                 </div>
                 <div class="gallery-item" title="YouTube MDKM">
-                    <img src="youtube-play-logo-png-7.png" data-full="youtube-play-logo-png-7.png" alt="YouTube MDKM">
+                    <img src="images/youtube-play-logo-png-7.png" data-full="images/youtube-play-logo-png-7.png" alt="YouTube MDKM">
                     <div class="caption">YouTube MDKM</div>
                 </div>
                 <!-- Tambah gambar baharu dengan meletakkan fail ke direktori ini dan gandakan blok di atas -->

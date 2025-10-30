@@ -56,11 +56,11 @@
 		<div class="header-container">
 			<div class="logo-section">
 				<div class="government-logos">
-					<img src="Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" title="Jata Negara Malaysia">
-					<img src="Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" title="Jata Wilayah Sabah">
+					<img src="images/Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" title="Jata Negara Malaysia">
+					<img src="images/Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" title="Jata Wilayah Sabah">
 				</div>
 				<div class="logo">
-					<img src="Logo_MDKM_1-removebg-preview.png" alt="Majlis Daerah Kota Marudu Logo" class="logo-img">
+					<img src="images/Logo_MDKM_1-removebg-preview.png" alt="Majlis Daerah Kota Marudu Logo" class="logo-img">
 					<div class="logo-text">
 						<h1>Majlis Daerah Kota Marudu</h1>
 						<p>Melayani Masyarakat dengan Dedikasi</p>
@@ -86,10 +86,10 @@
 			<div>
 				<div class="gallery">
 					<figure>
-						<img src="pangapuyan campsite.png" alt="Pangapuyan Campsite - tapak perkhemahan di tepi hutan dan sungai">
+						<img src="images/pangapuyan campsite.png" alt="Pangapuyan Campsite - tapak perkhemahan di tepi hutan dan sungai">
 					</figure>
 					<figure>
-						<img src="pangapuyan campsite 2.png" alt="Pangapuyan Campsite - suasana semula jadi dan aktiviti perkhemahan">
+						<img src="images/pangapuyan campsite 2.png" alt="Pangapuyan Campsite - suasana semula jadi dan aktiviti perkhemahan">
 					</figure>
 				</div>
 				<div class="info-card">
