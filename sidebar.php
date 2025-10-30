@@ -44,6 +44,7 @@
 				<li><a href="teringai-beach-and-lodge.php">Teringai Beach and Lodge</a></li>
 				<li><a href="pangapuyan-campsite.php">Pengapuyan Campsite</a></li>
 				<li><a href="walai-tobilung.php">Walai Tobilung</a></li>
+				<li><a href="walai-rabbit.php">Walai Rabbit</a></li>
                 <li><a href="kinabalu-park-sub-station-serinsim.php">Kinabalu Park Sub-Station Serinsim</a></li>
             </ul>
         </li>

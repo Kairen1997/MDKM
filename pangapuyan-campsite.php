@@ -36,7 +36,7 @@
 		.content-card li { margin-bottom: 8px; }
 
 		.map-card { background: #ffffff; border-radius: 14px; padding: 0; border: 1px solid #e9ecef; box-shadow: 0 8px 24px rgba(0,0,0,0.08); overflow: hidden; }
-		.map-responsive { position: relative; width: 100%; padding-bottom: 56.25%; }
+		.map-responsive { position: relative; width: 100%; padding-bottom: 40%; max-height: 320px; }
 		.map-responsive iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 		.footer { background: linear-gradient(135deg, #228B22 0%, #32CD32 100%); color: white; padding: 40px 0 20px 0; margin-top: 50px; }
