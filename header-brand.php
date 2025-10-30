@@ -55,6 +55,46 @@
     font-weight: 600;
 }
 
+/* Image Modal (Lightbox) */
+.image-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+
+.image-modal-content {
+	max-width: 90vw;
+	max-height: 90vh;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+	border-radius: 8px;
+	background: #000;
+}
+
+.image-modal-content img {
+	display: block;
+	max-width: 100%;
+	max-height: 90vh;
+	object-fit: contain;
+}
+
+.image-modal-close {
+	position: absolute;
+	top: 16px;
+	right: 20px;
+	color: #fff;
+	font-size: 28px;
+	line-height: 1;
+	cursor: pointer;
+	user-select: none;
+}
+
 @media (max-width: 768px) {
     .logo-section {
         flex-direction: column;
@@ -83,10 +123,60 @@
 	</div>
 	<div class="logo">
 		<div class="logo-text">
-			<h1>Majlis Daerah Kota Marudu</h1>
+			<h1><a href="landingpage.php" style="text-decoration:none; color:inherit;" title="Pergi ke Laman Utama">Majlis Daerah Kota Marudu</a></h1>
 			<p style="color:#fff">Melayani Masyarakat dengan Dedikasi</p>
 		</div>
 	</div>
 </div>
+
+<!-- Image Modal Markup -->
+<div class="image-modal-overlay" id="imageModal" aria-hidden="true" role="dialog">
+	<span class="image-modal-close" id="imageModalClose" aria-label="Tutup">×</span>
+	<div class="image-modal-content">
+		<img src="" alt="Paparan Logo" id="imageModalImg">
+	</div>
+</div>
+
+<script>
+// Enable click-to-enlarge for all logos in the header
+(function() {
+	var selectableImages = document.querySelectorAll('.government-logos img, .logo .logo-img');
+	var modal = document.getElementById('imageModal');
+	var modalImg = document.getElementById('imageModalImg');
+	var modalClose = document.getElementById('imageModalClose');
+
+	if (!selectableImages.length || !modal || !modalImg) return;
+
+	selectableImages.forEach(function(img) {
+		img.style.cursor = 'zoom-in';
+		img.addEventListener('click', function(e) {
+			e.preventDefault();
+			modalImg.src = img.getAttribute('src');
+			modal.style.display = 'flex';
+			modal.setAttribute('aria-hidden', 'false');
+			document.body.style.overflow = 'hidden';
+		});
+	});
+
+	function closeModal() {
+		modal.style.display = 'none';
+		modal.setAttribute('aria-hidden', 'true');
+		modalImg.src = '';
+		document.body.style.overflow = '';
+	}
+
+	modal.addEventListener('click', function(e) {
+		if (e.target === modal) closeModal();
+	});
+
+	if (modalClose) {
+		modalClose.addEventListener('click', closeModal);
+	}
+
+	document.addEventListener('keydown', function(e) {
+		if (e.key === 'Escape') closeModal();
+	});
+})();
+</script>
 
 
