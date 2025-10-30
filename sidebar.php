@@ -14,7 +14,12 @@
     </div>
     <ul class="sidebar-menu">
         <li><a href="landingpage.php" class="active">Laman Utama</a></li>
-        <li><a href="profil.php">Profil</a></li>
+        <li class="has-submenu">
+            <a href="profil.php" class="submenu-toggle">Profil <span class="submenu-arrow">▼</span></a>
+            <ul class="submenu">
+                <li><a href="directori.php">Directori</a></li>
+            </ul>
+        </li>
         <li class="has-submenu">
             <a href="perkhidmatan.php" class="submenu-toggle">Perkhidmatan <span class="submenu-arrow">▼</span></a>
             <ul class="submenu">
