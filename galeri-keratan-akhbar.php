@@ -131,68 +131,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" style="background: linear-gradient(135deg, #228B22 0%, #32CD32 100%); color: white; padding: 40px 0 20px 0; margin-top: 50px;">
-        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <div class="footer-contact">
-                <h3 style="font-size: 1.5rem; margin-bottom: 20px; text-align: center; color: #FFD700;">Hubungi Kami</h3>
-                <div class="footer-contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px;">
-                    <div class="footer-contact-item" style="display: flex; align-items: flex-start; gap: 15px; text-align: left;">
-                        <div class="contact-icon" style="font-size: 1.5rem; margin-top: 5px;">📍</div>
-                        <div>
-                            <h4 style="color: #FFD700; margin-bottom: 5px; font-size: 1rem;">Alamat</h4>
-                            <p style="margin: 0; font-size: 0.9rem; line-height: 1.4;">Jalan Utama, Kota Marudu<br>89100 Kota Marudu<br>Sabah, Malaysia</p>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item" style="display: flex; align-items: flex-start; gap: 15px; text-align: left;">
-                        <div class="contact-icon" style="font-size: 1.5rem; margin-top: 5px;">📞</div>
-                        <div>
-                            <h4 style="color: #FFD700; margin-bottom: 5px; font-size: 1rem;">Telefon</h4>
-                            <p style="margin: 0; font-size: 0.9rem; line-height: 1.4;">088-123456<br>088-123457</p>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item" style="display: flex; align-items: flex-start; gap: 15px; text-align: left;">
-                        <div class="contact-icon" style="font-size: 1.5rem; margin-top: 5px;">✉️</div>
-                        <div>
-                            <h4 style="color: #FFD700; margin-bottom: 5px; font-size: 1rem;">Email</h4>
-                            <p style="margin: 0; font-size: 0.9rem; line-height: 1.4;">info@mdkm.gov.my<br>admin@mdkm.gov.my</p>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item" style="display: flex; align-items: flex-start; gap: 15px; text-align: left;">
-                        <div class="contact-icon" style="font-size: 1.5rem; margin-top: 5px;">🕒</div>
-                        <div>
-                            <h4 style="color: #FFD700; margin-bottom: 5px; font-size: 1rem;">Waktu Operasi</h4>
-                            <p style="margin: 0; font-size: 0.9rem; line-height: 1.4;">Isnin - Jumaat<br>8:00 AM - 5:00 PM</p>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item" style="display: flex; align-items: flex-start; gap: 15px; text-align: left;">
-                        <div class="contact-icon" style="font-size: 1.5rem; margin-top: 5px;">
-                            <a href="https://www.facebook.com/people/Majlis-Daerah-Kota-Marudu/100064592716263/" target="_blank" title="Ikuti Kami di Facebook">
-                                <img src="images/facebook-logo.png" alt="Facebook" class="contact-logo" style="width: 2rem; height: 2rem; object-fit: contain;">
-                            </a>
-                        </div>
-                        <div>
-                            <h4 style="color: #FFD700; margin-bottom: 5px; font-size: 1rem;">Facebook</h4>
-                            <p style="margin: 0; font-size: 0.9rem; line-height: 1.4;"><a href="https://www.facebook.com/people/Majlis-Daerah-Kota-Marudu/100064592716263/" target="_blank" style="color: white; text-decoration: none;">Ikuti Kami di Facebook</a></p>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item" style="display: flex; align-items: flex-start; gap: 15px; text-align: left;">
-                        <div class="contact-icon" style="font-size: 1.5rem; margin-top: 5px;">
-                            <a href="https://www.youtube.com/channel/UClqBIJh4U2HXOVfJqMoD2JA" target="_blank" title="Ikuti Kami di YouTube">
-                                <img src="images/youtube-play-logo-png-7.png" alt="YouTube" class="contact-logo" style="width: 2rem; height: 2rem; object-fit: contain;">
-                            </a>
-                        </div>
-                        <div>
-                            <h4 style="color: #FFD700; margin-bottom: 5px; font-size: 1rem;">YouTube</h4>
-                            <p style="margin: 0; font-size: 0.9rem; line-height: 1.4;"><a href="https://www.youtube.com/channel/UClqBIJh4U2HXOVfJqMoD2JA" target="_blank" style="color: white; text-decoration: none;">Ikuti Kami di YouTube</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright" style="text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
-                <p style="margin: 5px 0;">&copy; 2024 Majlis Daerah Kota Marudu. Hak Cipta Terpelihara.</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
 
     <script src="sidebar.js"></script>
 </body>

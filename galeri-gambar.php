@@ -48,6 +48,20 @@
             object-fit: contain;
         }
 
+        /* Keep government logos compact so the header isn't too tall */
+        .government-logos {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .government-logos img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
         .logo-text h1 {
             font-size: 1.5rem;
             font-weight: bold;
@@ -252,9 +266,7 @@
     </div>
 
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; <?php echo date('Y'); ?> Majlis Daerah Kota Marudu. Hak Cipta Terpelihara.</p>
-        </div>
+        <?php include 'footer.php'; ?>
     </footer>
 
     <script src="sidebar.js"></script>

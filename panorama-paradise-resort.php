@@ -194,16 +194,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-contact">
-                <h3>Hubungi Kami</h3>
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 Majlis Daerah Kota Marudu. Hak Cipta Terpelihara.</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
 
     <script src="sidebar.js"></script>
 </body>
