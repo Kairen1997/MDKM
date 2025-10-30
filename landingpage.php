@@ -127,16 +127,27 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 20px; /* tighter to fit within hero width */
+            align-items: center;
+            flex-wrap: nowrap;
         }
 
         .nav-menu a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 10px 15px;
-            border-radius: 5px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            padding: 8px 14px; /* smaller to avoid wrapping */
+            border-radius: 6px;
+            line-height: 1.1; /* still comfortable */
+            letter-spacing: 0.2px; /* subtle refinement */
+            font-size: 0.95rem; /* fit within 1200px container */
+        }
+
+        /* Slightly reduce sizes on medium screens to keep one-line fit */
+        @media (max-width: 1200px) {
+            .nav-menu { gap: 16px; }
+            .nav-menu a { padding: 8px 12px; font-size: 0.93rem; }
         }
 
         .nav-menu a:hover {

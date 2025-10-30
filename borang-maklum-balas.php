@@ -10,8 +10,9 @@
 		body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
 
 		.header { background: linear-gradient(135deg, #228B22 0%, #32CD32 100%); color: white; padding: 1rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-		.header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-		.nav-menu { display: flex; list-style: none; gap: 30px; }
+		/* Make header look like the landing page banner: logos + title on first row, nav on second row */
+		.header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+		.nav-menu { display: flex; list-style: none; gap: 24px; margin: 4px 0 0 0; padding: 0; }
 		.nav-menu a { color: white; text-decoration: none; font-weight: 500; padding: 10px 15px; border-radius: 5px; }
 		.nav-menu a:hover { background-color: rgba(255,255,255,0.1); }
 
@@ -35,6 +36,10 @@
 		.alert { padding: 12px 14px; border-radius: 8px; margin-bottom: 16px; }
 		.alert-success { background: #e6ffe6; border: 1px solid #b5e7b5; color: #2f5132; }
 		.alert-error { background: #ffebee; border: 1px solid #ffcdd2; color: #c62828; }
+
+		/* Footer styles to match other pages */
+		.footer { background: linear-gradient(135deg, #228B22 0%, #32CD32 100%); color: white; padding: 40px 0 20px 0; margin-top: 50px; }
+		.footer-content { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 		@media (max-width: 768px) { .form-grid { grid-template-columns: 1fr; } .page-title { text-align: center; } }
 	</style>
@@ -129,7 +134,7 @@
 					<div>
 						<label for="telefon">No. Telefon</label>
 						<input type="tel" id="telefon" name="telefon" placeholder="Contoh: 0123456789" value="<?= htmlspecialchars($old['telefon']) ?>">
-						<p class="help">Opsyenal, untuk kami hubungi anda semula.</p>
+						<p class="help">Tidak wajib, untuk kami hubungi anda semula.</p>
 					</div>
 					<div>
 						<label for="kategori">Kategori</label>

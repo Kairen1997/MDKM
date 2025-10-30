@@ -196,9 +196,37 @@
 /* Shared header logo sizing */
 .government-logos img,
 .logo-img {
-	width: 60px;
-	height: 60px;
+	width: 64px;
+	height: 64px;
 	object-fit: contain;
+}
+
+/* Ensure all header logos align on a single line */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* spacing between logo group and text */
+    flex-wrap: nowrap;
+}
+
+.government-logos {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* equal spacing between all three logos */
+    flex-wrap: nowrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text h1 {
+    margin: 0 0 4px 0;
+}
+
+.logo-text p {
+    margin: 0;
 }
 
 @media (max-width: 768px) {
