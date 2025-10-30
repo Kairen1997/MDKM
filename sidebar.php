@@ -38,7 +38,7 @@
         <li class="has-submenu">
             <a href="tempat-menarik.php" class="submenu-toggle">Tempat Menarik Kota Marudu <span class="submenu-arrow">▼</span></a>
             <ul class="submenu">
-                <li><a href="tempat-menarik.php#panorama-paradise-resort">Panorama Paradise Resort</a></li>
+                <li><a href="panorama-paradise-resort.php">Panorama Paradise Resort</a></li>
                 <li><a href="tempat-menarik.php#pantai-mendawang">Pantai Mendawang</a></li>
                 <li><a href="tempat-menarik.php#sarangheyo-campground">Sarangheyo - Campground</a></li>
                 <li><a href="tempat-menarik.php#teringai-beach-and-lodge">Teringai Beach and Lodge</a></li>
