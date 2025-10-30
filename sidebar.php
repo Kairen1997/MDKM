@@ -40,6 +40,7 @@
             <ul class="submenu">
                 <li><a href="air-terjun-hatob.php">Air Terjun Hatob</a></li>
 				<li><a href="air-terjun-kokobuan.php">Air Terjun Kokobuan</a></li>
+                <li><a href="gumagayo-river-park.php">Gumagayo River Park</a></li>
                 <li><a href="kinabalu-park-sub-station-serinsim.php">Kinabalu Park Sub-Station Serinsim</a></li>
 				<li><a href="mundan-hill.php">Mundan Hill</a></li>
                 <li><a href="panorama-paradise-resort.php">Panorama Paradise Resort</a></li>
