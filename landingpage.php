@@ -180,9 +180,7 @@
         }
 
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23f0f0f0" width="1200" height="400"/><text x="600" y="200" text-anchor="middle" font-size="24" fill="%23999">Hero Image Placeholder</text></svg>');
-            background-size: cover;
-            background-position: center;
+            position: relative;
             height: 400px;
             display: flex;
             align-items: center;
@@ -191,6 +189,34 @@
             color: white;
             margin-bottom: 40px;
             border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .hero-slider {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: scale(1.05);
+            transition: opacity 900ms ease, transform 4800ms ease;
+            will-change: opacity, transform;
+        }
+
+        .hero-slide.is-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35));
         }
 
         .hero-content h2 {
@@ -546,7 +572,13 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section class="hero-section" aria-label="Imej Hero Kota Marudu">
+            <div class="hero-slider" aria-hidden="true">
+                <div class="hero-slide is-active" style="background-image:url('images/ilKM.png');"></div>
+                <div class="hero-slide" style="background-image:url('images/jagung%20.png');"></div>
+                <div class="hero-slide" style="background-image:url('images/majlis%20daerah%20kota%20marudu.png');"></div>
+                <div class="hero-overlay"></div>
+            </div>
             <div class="hero-content">
                 <h2>Selamat Datang ke Majlis Daerah Kota Marudu</h2>
                 <p>Komitmen kami untuk memberikan perkhidmatan terbaik kepada masyarakat Kota Marudu dan memastikan pembangunan yang mampan dan inklusif.</p>
@@ -732,6 +764,25 @@
                 this.style.transform = 'translateY(0)';
             });
         });
+
+        // Hero slider with modern fade/scale transition
+        (function() {
+            const slides = Array.from(document.querySelectorAll('.hero-slide'));
+            if (!slides.length) return;
+
+            let index = 0;
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const intervalMs = prefersReduced ? 7000 : 5000;
+
+            setInterval(() => {
+                const current = slides[index];
+                index = (index + 1) % slides.length;
+                const next = slides[index];
+
+                current.classList.remove('is-active');
+                next.classList.add('is-active');
+            }, intervalMs);
+        })();
     </script>
 </body>
 </html>
