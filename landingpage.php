@@ -1,9 +1,10 @@
+<?php include 'translations.php'; ?>
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="<?php echo $htmlLang; ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majlis Daerah Kota Marudu - Laman Utama</title>
+    <title><?php echo t('title'); ?></title>
     <link rel="stylesheet" href="sidebar.css">
     <style>
         * {
@@ -543,6 +544,9 @@
 </head>
 <body>
     <?php include 'sidebar.php'; ?>
+    <?php include 'language-switcher.php'; ?>
+    <?php include 'social-share.php'; ?>
+    <?php include 'chatbot.php'; ?>
 
     <!-- Header -->
     <header class="header">
@@ -551,11 +555,11 @@
             <div class="header-right">
                 <nav>
                     <ul class="nav-menu">
-                        <li><a href="#beranda">Beranda</a></li>
-                        <li><a href="#berita">Berita</a></li>
-                        <li><a href="#pengumuman">Pengumuman</a></li>
-                        <li><a href="#aktiviti">Aktiviti</a></li>
-                        <li><a href="#perkhidmatan">Perkhidmatan</a></li>
+                        <li><a href="#beranda"><?php echo t('beranda'); ?></a></li>
+                        <li><a href="#berita"><?php echo t('berita'); ?></a></li>
+                        <li><a href="#pengumuman"><?php echo t('pengumuman'); ?></a></li>
+                        <li><a href="#aktiviti"><?php echo t('aktiviti'); ?></a></li>
+                        <li><a href="#perkhidmatan"><?php echo t('perkhidmatan'); ?></a></li>
                     </ul>
                 </nav>
                 <div class="header-info" aria-label="Maklumat Pengunjung dan Tarikh">
@@ -580,42 +584,42 @@
                 <div class="hero-overlay"></div>
             </div>
             <div class="hero-content">
-                <h2>Selamat Datang ke Majlis Daerah Kota Marudu</h2>
-                <p>Komitmen kami untuk memberikan perkhidmatan terbaik kepada masyarakat Kota Marudu dan memastikan pembangunan yang mampan dan inklusif.</p>
+                <h2><?php echo t('welcome'); ?></h2>
+                <p><?php echo t('welcome_desc'); ?></p>
             </div>
         </section>
 
         <!-- Berita Section -->
         <section id="berita" class="section">
-            <h2 class="section-title">Berita Terkini</h2>
+            <h2 class="section-title"><?php echo t('berita_terkini'); ?></h2>
             <div class="news-grid">
                 <article class="news-item">
                     <div class="news-image">📰</div>
                     <div class="news-content">
-                        <h3 class="news-title">Program Pembangunan Infrastruktur 2024</h3>
-                        <p class="news-date">15 Januari 2024</p>
-                        <p class="news-excerpt">Majlis Daerah Kota Marudu melancarkan program pembangunan infrastruktur komprehensif untuk meningkatkan kualiti hidup penduduk...</p>
-                        <a href="#" class="btn">Baca Selanjutnya</a>
+                        <h3 class="news-title"><?php echo t('news_1_title'); ?></h3>
+                        <p class="news-date"><?php echo t('news_1_date'); ?></p>
+                        <p class="news-excerpt"><?php echo t('news_1_excerpt'); ?></p>
+                        <a href="#" class="btn"><?php echo t('baca_selanjutnya'); ?></a>
                     </div>
                 </article>
                 
                 <article class="news-item">
                     <div class="news-image">🏛️</div>
                     <div class="news-content">
-                        <h3 class="news-title">Sesi Dialog Masyarakat Bulanan</h3>
-                        <p class="news-date">12 Januari 2024</p>
-                        <p class="news-excerpt">Sesi dialog masyarakat bulanan akan diadakan untuk membincangkan isu-isu pembangunan dan perkhidmatan awam...</p>
-                        <a href="#" class="btn">Baca Selanjutnya</a>
+                        <h3 class="news-title"><?php echo t('news_2_title'); ?></h3>
+                        <p class="news-date"><?php echo t('news_2_date'); ?></p>
+                        <p class="news-excerpt"><?php echo t('news_2_excerpt'); ?></p>
+                        <a href="#" class="btn"><?php echo t('baca_selanjutnya'); ?></a>
                     </div>
                 </article>
                 
                 <article class="news-item">
                     <div class="news-image">🌱</div>
                     <div class="news-content">
-                        <h3 class="news-title">Kempen Kebersihan Bandar</h3>
-                        <p class="news-date">10 Januari 2024</p>
-                        <p class="news-excerpt">Kempen kebersihan bandar dilancarkan dengan sasaran menjadikan Kota Marudu sebagai bandar yang bersih dan hijau...</p>
-                        <a href="#" class="btn">Baca Selanjutnya</a>
+                        <h3 class="news-title"><?php echo t('news_3_title'); ?></h3>
+                        <p class="news-date"><?php echo t('news_3_date'); ?></p>
+                        <p class="news-excerpt"><?php echo t('news_3_excerpt'); ?></p>
+                        <a href="#" class="btn"><?php echo t('baca_selanjutnya'); ?></a>
                     </div>
                 </article>
             </div>
@@ -623,35 +627,35 @@
 
         <!-- Aktiviti Section -->
         <section id="aktiviti" class="section">
-            <h2 class="section-title">Aktiviti & Program</h2>
+            <h2 class="section-title"><?php echo t('aktiviti_program'); ?></h2>
             <div class="news-grid">
                 <article class="news-item">
                     <div class="news-image">🎯</div>
                     <div class="news-content">
-                        <h3 class="news-title">Program Latihan Kemahiran</h3>
-                        <p class="news-date">20 Januari 2024</p>
-                        <p class="news-excerpt">Program latihan kemahiran untuk belia dan wanita dalam pelbagai bidang seperti teknologi, perniagaan dan kraftangan...</p>
-                        <a href="#" class="btn">Daftar Sekarang</a>
+                        <h3 class="news-title"><?php echo t('activity_1_title'); ?></h3>
+                        <p class="news-date"><?php echo t('activity_1_date'); ?></p>
+                        <p class="news-excerpt"><?php echo t('activity_1_excerpt'); ?></p>
+                        <a href="#" class="btn"><?php echo t('daftar_sekarang'); ?></a>
                     </div>
                 </article>
                 
                 <article class="news-item">
                     <div class="news-image">🏃‍♂️</div>
                     <div class="news-content">
-                        <h3 class="news-title">Karnival Sukan Komuniti</h3>
-                        <p class="news-date">25 Januari 2024</p>
-                        <p class="news-excerpt">Karnival sukan komuniti akan diadakan di Stadium Mini Kota Marudu dengan pelbagai acara sukan dan pertandingan...</p>
-                        <a href="#" class="btn">Maklumat Lanjut</a>
+                        <h3 class="news-title"><?php echo t('activity_2_title'); ?></h3>
+                        <p class="news-date"><?php echo t('activity_2_date'); ?></p>
+                        <p class="news-excerpt"><?php echo t('activity_2_excerpt'); ?></p>
+                        <a href="#" class="btn"><?php echo t('maklumat_lanjut'); ?></a>
                     </div>
                 </article>
                 
                 <article class="news-item">
                     <div class="news-image">🎨</div>
                     <div class="news-content">
-                        <h3 class="news-title">Festival Budaya & Seni</h3>
-                        <p class="news-date">30 Januari 2024</p>
-                        <p class="news-excerpt">Festival budaya dan seni menampilkan keunikan budaya tempatan dengan persembahan tradisional dan pameran seni...</p>
-                        <a href="#" class="btn">Jadual Acara</a>
+                        <h3 class="news-title"><?php echo t('activity_3_title'); ?></h3>
+                        <p class="news-date"><?php echo t('activity_3_date'); ?></p>
+                        <p class="news-excerpt"><?php echo t('activity_3_excerpt'); ?></p>
+                        <a href="#" class="btn"><?php echo t('jadual_acara'); ?></a>
                     </div>
                 </article>
             </div>
@@ -659,60 +663,69 @@
 
         <!-- Pengumuman Section -->
         <section id="pengumuman" class="section">
-            <h2 class="section-title">Pengumuman Penting</h2>
+            <h2 class="section-title"><?php echo t('pengumuman_penting'); ?></h2>
             <ul class="announcement-list">
                 <li class="announcement-item">
-                    <div class="announcement-title">Penutupan Sementara Pejabat MDKM untuk Kerja-kerja Penyelenggaraan</div>
+                    <div class="announcement-title"><?php echo t('announcement_1'); ?></div>
                     <span class="announcement-date">18 Jan 2024</span>
                 </li>
                 <li class="announcement-item">
-                    <div class="announcement-title">Perubahan Waktu Operasi Kaunter Perkhidmatan Awam</div>
+                    <div class="announcement-title"><?php echo t('announcement_2'); ?></div>
                     <span class="announcement-date">16 Jan 2024</span>
                 </li>
                 <li class="announcement-item">
-                    <div class="announcement-title">Pemberitahuan Cukai Taksiran 2024 - Tarikh Akhir Bayaran</div>
+                    <div class="announcement-title"><?php echo t('announcement_3'); ?></div>
                     <span class="announcement-date">14 Jan 2024</span>
                 </li>
                 <li class="announcement-item">
-                    <div class="announcement-title">Program Bantuan Kewangan untuk Usahawan Kecil dan Sederhana</div>
+                    <div class="announcement-title"><?php echo t('announcement_4'); ?></div>
                     <span class="announcement-date">12 Jan 2024</span>
                 </li>
                 <li class="announcement-item">
-                    <div class="announcement-title">Jadual Pengumpulan Sampah Sempena Cuti Umum</div>
+                    <div class="announcement-title"><?php echo t('announcement_5'); ?></div>
                     <span class="announcement-date">10 Jan 2024</span>
                 </li>
             </ul>
             <div style="text-align: center; margin-top: 20px;">
-                <a href="#" class="btn btn-secondary">Lihat Semua Pengumuman</a>
+                <a href="#" class="btn btn-secondary"><?php echo t('lihat_semua_pengumuman'); ?></a>
             </div>
         </section>
 
         <!-- Perkhidmatan Section -->
         <section id="perkhidmatan" class="section">
-            <h2 class="section-title">Perkhidmatan Kami</h2>
+            <h2 class="section-title"><?php echo t('perkhidmatan_kami'); ?></h2>
             <div class="news-grid">
                 <div class="news-item">
                     <div class="news-content">
-                        <h3 class="news-title">Perkhidmatan Awam</h3>
-                        <p class="news-excerpt">Pendaftaran, lesen perniagaan, permit pembinaan, dan pelbagai perkhidmatan awam yang lain.</p>
-                        <a href="#" class="btn">Maklumat Lanjut</a>
+                        <h3 class="news-title"><?php echo t('service_1_title'); ?></h3>
+                        <p class="news-excerpt"><?php echo t('service_1_desc'); ?></p>
+                        <a href="#" class="btn"><?php echo t('maklumat_lanjut'); ?></a>
                     </div>
                 </div>
                 <div class="news-item">
                     <div class="news-content">
-                        <h3 class="news-title">Pembangunan Bandar</h3>
-                        <p class="news-excerpt">Perancangan pembangunan, pengurusan infrastruktur, dan penyelenggaraan kemudahan awam.</p>
-                        <a href="#" class="btn">Maklumat Lanjut</a>
+                        <h3 class="news-title"><?php echo t('service_2_title'); ?></h3>
+                        <p class="news-excerpt"><?php echo t('service_2_desc'); ?></p>
+                        <a href="#" class="btn"><?php echo t('maklumat_lanjut'); ?></a>
                     </div>
                 </div>
                 <div class="news-item">
                     <div class="news-content">
-                        <h3 class="news-title">Perkhidmatan Sosial</h3>
-                        <p class="news-excerpt">Bantuan kewangan, program komuniti, dan perkhidmatan sokongan untuk masyarakat.</p>
-                        <a href="#" class="btn">Maklumat Lanjut</a>
+                        <h3 class="news-title"><?php echo t('service_3_title'); ?></h3>
+                        <p class="news-excerpt"><?php echo t('service_3_desc'); ?></p>
+                        <a href="#" class="btn"><?php echo t('maklumat_lanjut'); ?></a>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <?php include 'newsletter-subscription.php'; ?>
+
+        <!-- Weather Widget Section -->
+        <section class="section">
+            <h2 class="section-title"><?php echo t('cuaca_semasa', 'Cuaca Semasa'); ?></h2>
+            <?php include 'weather-widget.php'; ?>
         </section>
 
     </main>
@@ -720,7 +733,7 @@
     <!-- Pautan Pantas Section -->
     <section class="section" id="pautan-pantas" aria-labelledby="pautanPantasTitle">
         <div class="quick-links">
-            <h2 class="section-title" id="pautanPantasTitle">Pautan Pantas</h2>
+            <h2 class="section-title" id="pautanPantasTitle"><?php echo t('pautan_pantas'); ?></h2>
             <div class="quick-links-grid">
                 <div class="quick-link">
                     <a href="https://i-adu.sabah.gov.my/" target="_blank" rel="noopener noreferrer">i-Adu Aduan</a>
@@ -738,6 +751,7 @@
     <!-- Footer -->
     <?php include 'footer.php'; ?>
 
+    <?php include 'analytics-dashboard.php'; ?>
     <script src="sidebar.js"></script>
     <script>
         // Smooth scrolling for navigation links

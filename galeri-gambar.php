@@ -100,6 +100,52 @@
             border-bottom: 3px solid #FFD700;
         }
 
+        .gallery-filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #228B22;
+            background: white;
+            color: #228B22;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #228B22;
+            color: white;
+        }
+
+        .gallery-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .gallery-controls button {
+            padding: 8px 16px;
+            background: #228B22;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .gallery-controls button:hover {
+            background: #32CD32;
+        }
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -113,6 +159,12 @@
             background: #eee;
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             cursor: zoom-in;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item.hidden {
+            display: none;
         }
 
         .gallery-item img {
@@ -121,6 +173,7 @@
             object-fit: cover;
             display: block;
             transition: transform 0.3s ease;
+            loading: lazy;
         }
 
         .gallery-item:hover img {
@@ -170,6 +223,71 @@
             border-radius: 6px;
             cursor: pointer;
             font-weight: 600;
+            z-index: 2001;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            color: #1a1a1a;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.2rem;
+            z-index: 2001;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255,255,255,1);
+        }
+
+        .lightbox-nav.prev {
+            left: 20px;
+        }
+
+        .lightbox-nav.next {
+            right: 20px;
+        }
+
+        .lightbox-info {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            z-index: 2001;
+        }
+
+        .slideshow-mode .gallery-item {
+            cursor: pointer;
+        }
+
+        .slideshow-container {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slideshow-container.active {
+            display: flex;
+        }
+
+        .slideshow-image {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
         }
 
         .footer {
@@ -196,23 +314,139 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const lb = document.querySelector('.lightbox');
-            const lbImg = lb.querySelector('img');
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function() {
-                    const src = this.querySelector('img').getAttribute('data-full') || this.querySelector('img').src;
-                    lbImg.src = src;
-                    lb.classList.add('open');
+            const lbImg = document.getElementById('lightboxImg');
+            const lbInfo = document.getElementById('lightboxInfo');
+            const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+            let currentIndex = 0;
+            let filteredItems = galleryItems;
+
+            // Filter functionality
+            document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const filter = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+                    filteredItems = galleryItems.filter(item => !item.classList.contains('hidden'));
                 });
             });
+
+            // Lightbox navigation
+            function openLightbox(index) {
+                currentIndex = index;
+                const item = filteredItems[currentIndex];
+                const src = item.querySelector('img').getAttribute('data-full') || item.querySelector('img').src;
+                const caption = item.querySelector('.caption')?.textContent || '';
+                lbImg.src = src;
+                lbInfo.textContent = `${currentIndex + 1} / ${filteredItems.length} - ${caption}`;
+                lb.classList.add('open');
+            }
+
+            function closeLightbox() {
+                lb.classList.remove('open');
+                lbImg.src = '';
+            }
+
+            function lightboxPrev() {
+                if (filteredItems.length === 0) return;
+                currentIndex = (currentIndex - 1 + filteredItems.length) % filteredItems.length;
+                openLightbox(currentIndex);
+            }
+
+            function lightboxNext() {
+                if (filteredItems.length === 0) return;
+                currentIndex = (currentIndex + 1) % filteredItems.length;
+                openLightbox(currentIndex);
+            }
+
+            // Click to open lightbox
+            filteredItems.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    openLightbox(index);
+                });
+            });
+
+            // Lightbox controls
+            lb.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+            lb.querySelector('.prev').addEventListener('click', lightboxPrev);
+            lb.querySelector('.next').addEventListener('click', lightboxNext);
+            
             lb.addEventListener('click', function(e) {
-                if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {
-                    lb.classList.remove('open');
-                    lbImg.src = '';
+                if (e.target.classList.contains('lightbox')) {
+                    closeLightbox();
                 }
             });
-            document.addEventListener('keydown', function(e){
-                if (e.key === 'Escape') lb.classList.remove('open');
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (lb.classList.contains('open')) {
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowLeft') lightboxPrev();
+                    if (e.key === 'ArrowRight') lightboxNext();
+                }
             });
+
+            // Slideshow functionality
+            let slideshowInterval = null;
+            let slideshowIndex = 0;
+
+            window.startSlideshow = function() {
+                if (filteredItems.length === 0) return;
+                slideshowIndex = 0;
+                const container = document.getElementById('slideshowContainer');
+                const slideshowImg = document.getElementById('slideshowImg');
+                const slideshowInfo = document.getElementById('slideshowInfo');
+                
+                function showSlide() {
+                    const item = filteredItems[slideshowIndex];
+                    const src = item.querySelector('img').getAttribute('data-full') || item.querySelector('img').src;
+                    const caption = item.querySelector('.caption')?.textContent || '';
+                    slideshowImg.src = src;
+                    slideshowInfo.textContent = `${slideshowIndex + 1} / ${filteredItems.length} - ${caption}`;
+                    container.classList.add('active');
+                }
+
+                showSlide();
+                slideshowInterval = setInterval(() => {
+                    slideshowIndex = (slideshowIndex + 1) % filteredItems.length;
+                    showSlide();
+                }, 3000);
+            };
+
+            window.stopSlideshow = function() {
+                if (slideshowInterval) {
+                    clearInterval(slideshowInterval);
+                    slideshowInterval = null;
+                }
+                document.getElementById('slideshowContainer').classList.remove('active');
+            };
+
+            window.slideshowPrev = function() {
+                slideshowIndex = (slideshowIndex - 1 + filteredItems.length) % filteredItems.length;
+                const item = filteredItems[slideshowIndex];
+                const src = item.querySelector('img').getAttribute('data-full') || item.querySelector('img').src;
+                const caption = item.querySelector('.caption')?.textContent || '';
+                document.getElementById('slideshowImg').src = src;
+                document.getElementById('slideshowInfo').textContent = `${slideshowIndex + 1} / ${filteredItems.length} - ${caption}`;
+            };
+
+            window.slideshowNext = function() {
+                slideshowIndex = (slideshowIndex + 1) % filteredItems.length;
+                const item = filteredItems[slideshowIndex];
+                const src = item.querySelector('img').getAttribute('data-full') || item.querySelector('img').src;
+                const caption = item.querySelector('.caption')?.textContent || '';
+                document.getElementById('slideshowImg').src = src;
+                document.getElementById('slideshowInfo').textContent = `${slideshowIndex + 1} / ${filteredItems.length} - ${caption}`;
+            };
+
+            document.getElementById('slideshowBtn').addEventListener('click', startSlideshow);
         });
     </script>
     <style>
@@ -234,25 +468,36 @@
 
         <section class="section">
             <h3 class="section-title">Album Pilihan</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item" title="Logo Rasmi MDKM">
-                    <img src="images/Logo_MDKM_1-removebg-preview.png" data-full="images/Logo_MDKM_1-removebg-preview.png" alt="Logo Rasmi MDKM">
+            
+            <div class="gallery-controls">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="logo">Logo</button>
+                    <button class="filter-btn" data-filter="aktiviti">Aktiviti</button>
+                    <button class="filter-btn" data-filter="acara">Acara</button>
+                </div>
+                <button id="slideshowBtn" class="filter-btn">🎬 Slideshow</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="logo" title="Logo Rasmi MDKM">
+                    <img src="images/Logo_MDKM_1-removebg-preview.png" data-full="images/Logo_MDKM_1-removebg-preview.png" alt="Logo Rasmi MDKM" loading="lazy">
                     <div class="caption">Logo Rasmi MDKM</div>
                 </div>
-                <div class="gallery-item" title="Jata Negara Malaysia">
-                    <img src="images/Jata_Negara-removebg-preview.png" data-full="images/Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia">
+                <div class="gallery-item" data-category="logo" title="Jata Negara Malaysia">
+                    <img src="images/Jata_Negara-removebg-preview.png" data-full="images/Jata_Negara-removebg-preview.png" alt="Jata Negara Malaysia" loading="lazy">
                     <div class="caption">Jata Negara Malaysia</div>
                 </div>
-                <div class="gallery-item" title="Jata Wilayah Sabah">
-                    <img src="images/Jata_Wilayah_Sabah-removebg-preview.png" data-full="images/Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah">
+                <div class="gallery-item" data-category="logo" title="Jata Wilayah Sabah">
+                    <img src="images/Jata_Wilayah_Sabah-removebg-preview.png" data-full="images/Jata_Wilayah_Sabah-removebg-preview.png" alt="Jata Wilayah Sabah" loading="lazy">
                     <div class="caption">Jata Wilayah Sabah</div>
                 </div>
-                <div class="gallery-item" title="Facebook MDKM">
-                    <img src="images/facebook-logo.png" data-full="images/facebook-logo.png" alt="Facebook MDKM">
+                <div class="gallery-item" data-category="aktiviti" title="Facebook MDKM">
+                    <img src="images/facebook-logo.png" data-full="images/facebook-logo.png" alt="Facebook MDKM" loading="lazy">
                     <div class="caption">Facebook MDKM</div>
                 </div>
-                <div class="gallery-item" title="YouTube MDKM">
-                    <img src="images/youtube-play-logo-png-7.png" data-full="images/youtube-play-logo-png-7.png" alt="YouTube MDKM">
+                <div class="gallery-item" data-category="aktiviti" title="YouTube MDKM">
+                    <img src="images/youtube-play-logo-png-7.png" data-full="images/youtube-play-logo-png-7.png" alt="YouTube MDKM" loading="lazy">
                     <div class="caption">YouTube MDKM</div>
                 </div>
                 <!-- Tambah gambar baharu dengan meletakkan fail ke direktori ini dan gandakan blok di atas -->
@@ -261,8 +506,19 @@
     </main>
 
     <div class="lightbox" role="dialog" aria-modal="true" aria-label="Paparan Gambar">
-        <button class="lightbox-close" aria-label="Tutup">Tutup</button>
-        <img src="" alt="Paparan gambar besar">
+        <button class="lightbox-close" aria-label="Tutup">✕</button>
+        <button class="lightbox-nav prev" aria-label="Gambar Sebelumnya">‹</button>
+        <button class="lightbox-nav next" aria-label="Gambar Seterusnya">›</button>
+        <img src="" alt="Paparan gambar besar" id="lightboxImg">
+        <div class="lightbox-info" id="lightboxInfo"></div>
+    </div>
+
+    <div class="slideshow-container" id="slideshowContainer">
+        <button class="lightbox-close" onclick="stopSlideshow()" aria-label="Tutup">✕</button>
+        <button class="lightbox-nav prev" onclick="slideshowPrev()" aria-label="Sebelumnya">‹</button>
+        <button class="lightbox-nav next" onclick="slideshowNext()" aria-label="Seterusnya">›</button>
+        <img src="" alt="Slideshow" class="slideshow-image" id="slideshowImg">
+        <div class="lightbox-info" id="slideshowInfo"></div>
     </div>
 
     <footer class="footer">

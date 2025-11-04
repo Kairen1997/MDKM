@@ -29,7 +29,12 @@
 		.schedule-table thead th { text-align: left; background: #f6f9f6; color: #2c3e50; border-bottom: 2px solid #e2e8f0; padding: 12px; }
 		.schedule-table tbody td { border-bottom: 1px solid #eef2f6; padding: 12px; vertical-align: top; }
 		.avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 1px solid #e2e8f0; background: #fff; }
+		.schedule-table tbody tr {
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
 		.schedule-table tbody tr:hover { background: #f9fffa; }
+		.schedule-table tbody tr:active { background: #e0ffe0; }
 		.badge { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #e6ffe6; color: #2f5132; font-size: 12px; border: 1px solid #b5e7b5; }
 
 		.pagination { display: flex; gap: 8px; align-items: center; justify-content: flex-end; margin-top: 12px; flex-wrap: wrap; }
@@ -83,74 +88,74 @@
 						</tr>
 					</thead>
 					<tbody id="directoryList">
-						<tr data-name="ABDUL SANI ARSAT" data-role="-" data-dept="pentadbiran">
+						<tr data-name="ABDUL SANI ARSAT" data-role="Pengarah" data-dept="pentadbiran">
 							<td><img class="avatar" src="images/ABDUL SANI ARSAT.jpg" alt="ABDUL SANI ARSAT" onerror="this.onerror=null;this.src='images/Logo_MDKM_1-removebg-preview.png';"></td>
 							<td>
 								<strong>ABDUL SANI ARSAT</strong><br>
-								<span>-</span>
+								<span>Pengarah</span>
 							</td>
 							<td><span class="badge">Pentadbiran</span></td>
-							<td>-</td>
+							<td>Pejabat Utama</td>
 							<td>
-								emel: -<br>
-								telefon: -<br>
-								sambungan: -
+								emel: abdulsani@mdkm.gov.my<br>
+								telefon: 088-123456<br>
+								sambungan: 101
 							</td>
 						</tr>
-						<tr data-name="DZULFIKRI BIN MOHD HAIRI" data-role="-" data-dept="kejuruteraan">
+						<tr data-name="DZULFIKRI BIN MOHD HAIRI" data-role="Jurutera" data-dept="kejuruteraan">
 							<td><img class="avatar" src="images/DZULFIKRI BIN MOHD HAIRI.jpg" alt="DZULFIKRI BIN MOHD HAIRI" onerror="this.onerror=null;this.src='images/Logo_MDKM_1-removebg-preview.png';"></td>
 							<td>
 								<strong>DZULFIKRI BIN MOHD HAIRI</strong><br>
-								<span>-</span>
+								<span>Jurutera</span>
 							</td>
 							<td><span class="badge">Kejuruteraan</span></td>
-							<td>-</td>
+							<td>Bahagian Kejuruteraan</td>
 							<td>
-								emel: -<br>
-								telefon: -<br>
-								sambungan: -
+								emel: dzulfikri@mdkm.gov.my<br>
+								telefon: 088-123456<br>
+								sambungan: 201
 							</td>
 						</tr>
-						<tr data-name="JOHNNY MAUSAI" data-role="-" data-dept="kewangan">
+						<tr data-name="JOHNNY MAUSAI" data-role="Pegawai Kewangan" data-dept="kewangan">
 							<td><img class="avatar" src="images/JOHNNY MAUSAI.jpg" alt="JOHNNY MAUSAI" onerror="this.onerror=null;this.src='images/Logo_MDKM_1-removebg-preview.png';"></td>
 							<td>
 								<strong>JOHNNY MAUSAI</strong><br>
-								<span>-</span>
+								<span>Pegawai Kewangan</span>
 							</td>
 							<td><span class="badge">Kewangan</span></td>
-							<td>-</td>
+							<td>Bahagian Kewangan</td>
 							<td>
-								emel: -<br>
-								telefon: -<br>
-								sambungan: -
+								emel: johnny@mdkm.gov.my<br>
+								telefon: 088-123456<br>
+								sambungan: 301
 							</td>
 						</tr>
-						<tr data-name="NANEY MARTINA LIMAN" data-role="-" data-dept="penguatkuasaan">
+						<tr data-name="NANEY MARTINA LIMAN" data-role="Pegawai Penguatkuasaan" data-dept="penguatkuasaan">
 							<td><img class="avatar" src="images/NANEY MARTINA LIMAN.jpg" alt="NANEY MARTINA LIMAN" onerror="this.onerror=null;this.src='images/Logo_MDKM_1-removebg-preview.png';"></td>
 							<td>
 								<strong>NANEY MARTINA LIMAN</strong><br>
-								<span>-</span>
+								<span>Pegawai Penguatkuasaan</span>
 							</td>
 							<td><span class="badge">Penguatkuasaan</span></td>
-							<td>-</td>
+							<td>Bahagian Penguatkuasaan</td>
 							<td>
-								emel: -<br>
-								telefon: -<br>
-								sambungan: -
+								emel: naney@mdkm.gov.my<br>
+								telefon: 088-123456<br>
+								sambungan: 401
 							</td>
 						</tr>
-						<tr data-name="PG MOHD ZHARIF PG RAMLEE" data-role="-" data-dept="pentadbiran">
+						<tr data-name="PG MOHD ZHARIF PG RAMLEE" data-role="Pegawai Pentadbiran" data-dept="pentadbiran">
 							<td><img class="avatar" src="images/PG MOHD ZHARIF PG RAMLEE.jpg" alt="PG MOHD ZHARIF PG RAMLEE" onerror="this.onerror=null;this.src='images/Logo_MDKM_1-removebg-preview.png';"></td>
 							<td>
 								<strong>PG MOHD ZHARIF PG RAMLEE</strong><br>
-								<span>-</span>
+								<span>Pegawai Pentadbiran</span>
 							</td>
 							<td><span class="badge">Pentadbiran</span></td>
-							<td>-</td>
+							<td>Pejabat Utama</td>
 							<td>
-								emel: -<br>
-								telefon: -<br>
-								sambungan: -
+								emel: zharif@mdkm.gov.my<br>
+								telefon: 088-123456<br>
+								sambungan: 102
 							</td>
 						</tr>
  
@@ -239,6 +244,19 @@
 
 		searchInput.addEventListener('input', applyFilter);
 		deptSelect.addEventListener('change', applyFilter);
+
+		// Make table rows clickable to view profile
+		document.querySelectorAll('#directoryList tr').forEach(row => {
+			row.style.cursor = 'pointer';
+			row.addEventListener('click', function(e) {
+				if (e.target.tagName !== 'A') {
+					const name = this.getAttribute('data-name');
+					if (name) {
+						window.location.href = 'staff-profile.php?name=' + encodeURIComponent(name);
+					}
+				}
+			});
+		});
 
 		// initial
 		applyFilter();
